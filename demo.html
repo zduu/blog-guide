@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客导航 - 增强版演示</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 演示页面特殊样式 */
+        .demo-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-align: center;
+        }
+        
+        .demo-info h2 {
+            margin-bottom: 1rem;
+            color: #f093fb;
+        }
+        
+        .demo-info ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .demo-info li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        // 演示配置
+        const BLOG_CONFIG = {
+            site: {
+                title: "博客导航 - 增强版",
+                subtitle: "体验全新的动态效果和交互设计",
+                footer: "© 2024 博客导航增强版. 用心发现，用爱分享."
+            },
+            blogs: [
+                {
+                    id: "tech-blog",
+                    title: "技术博客",
+                    description: "分享前沿技术和开发经验",
+                    url: "https://example.com/tech",
+                    icon: "fas fa-rocket",
+                    tags: ["技术", "开发", "前端"]
+                },
+                {
+                    id: "life-blog", 
+                    title: "生活随笔",
+                    description: "记录生活中的点点滴滴",
+                    url: "https://example.com/life",
+                    icon: "fas fa-lightbulb",
+                    tags: ["生活", "随笔", "感悟"]
+                },
+                {
+                    id: "reading-blog",
+                    title: "读书笔记", 
+                    description: "分享阅读心得和书籍推荐",
+                    url: "https://example.com/reading",
+                    icon: "fas fa-book-open",
+                    tags: ["读书", "笔记", "推荐"]
+                },
+                {
+                    id: "travel-blog",
+                    title: "旅行日记", 
+                    description: "记录旅途中的美好时光",
+                    url: "https://example.com/travel",
+                    icon: "fas fa-map-marked-alt",
+                    tags: ["旅行", "摄影", "探索"]
+                },
+                {
+                    id: "food-blog",
+                    title: "美食天地", 
+                    description: "发现和分享各地美食",
+                    url: "https://example.com/food",
+                    icon: "fas fa-utensils",
+                    tags: ["美食", "烹饪", "分享"]
+                },
+                {
+                    id: "photo-blog",
+                    title: "摄影作品", 
+                    description: "用镜头记录世界的美好",
+                    url: "https://example.com/photo",
+                    icon: "fas fa-camera",
+                    tags: ["摄影", "艺术", "创作"]
+                }
+            ]
+        };
+        
+        if (typeof window !== 'undefined') {
+            window.BLOG_CONFIG = BLOG_CONFIG;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="demo-info">
+            <h2><i class="fas fa-star"></i> 增强功能演示</h2>
+            <p>这个演示页面展示了博客导航的所有增强功能</p>
+            <ul>
+                <li>✨ 动态背景图片</li>
+                <li>🎨 独特卡片形状</li>
+                <li>💫 悬停动画效果</li>
+                <li>🎯 点击爆炸特效</li>
+                <li>🌟 鼠标跟随粒子</li>
+                <li>🚀 页面加载动画</li>
+            </ul>
+        </div>
+        
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-compass"></i>
+                    博客导航 - 增强版
+                </h1>
+                <p class="subtitle">体验全新的动态效果和交互设计</p>
+            </div>
+            <div class="header-decoration"></div>
+        </header>
+
+        <main class="main">
+            <div class="navigation-grid" id="navigation-grid">
+                <!-- 博客导航卡片将通过JavaScript动态生成 -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 博客导航增强版. 用心发现，用爱分享.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
