@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "start": "deno run --allow-net --allow-read server.ts",
+    "dev": "deno run --allow-net --allow-read --watch server.ts",
+    "deploy:deno": "deployctl deploy --project=blog-navigator server.ts",
+    "deploy:cf": "wrangler pages deploy . --project-name=blog-navigator"
+  }
+}
