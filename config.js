@@ -13,27 +13,27 @@ const BLOG_CONFIG = {
   blogs: [
     {
       id: "tech-blog",
-      title: "技术博客",
+      title: "正常人的博客",
       description: "探索前沿技术，分享编程经验与见解",
       url: "https://zoeoe.de",  // 👈 修改这里的URL（示例：https://your-blog.com）
       icon: "fas fa-rocket",
-      tags: ["前端", "后端", "AI"]
+      tags: ["学习", "捣腾", "AI"]
     },
     {
       id: "life-blog", 
-      title: "生活感悟",
+      title: "幻想进行时",
       description: "记录生活点滴，分享人生感悟与思考",
-      url: "https://blog.example2.com",  // 👈 修改这里的URL
+      url: "http://zhou12203.top",  // 👈 修改这里的URL
       icon: "fas fa-lightbulb",
-      tags: ["生活", "思考", "成长"]
+      tags: ["幻想", "发癫", "热爱"]
     },
     {
       id: "reading-blog",
-      title: "读书笔记", 
+      title: "牛刀小试", 
       description: "好书推荐，读书心得与知识分享",
-      url: "https://blog.example3.com",  // 👈 修改这里的URL
+      url: "https://blog.zhou12203.top",  // 👈 修改这里的URL
       icon: "fas fa-book-open",
-      tags: ["阅读", "笔记", "分享"]
+      tags: ["摆设", "收藏", "尝试"]
     }
   ]
 };
