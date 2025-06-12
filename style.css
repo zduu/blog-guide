@@ -838,24 +838,40 @@ body::before {
     font-size: 0.9rem;
 }
 
-/* 响应式设计 */
+/* 响应式设计 - 移动端性能优化 */
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
     }
 
+    /* 移动端简化标题动画 */
     .title {
         font-size: 2.5rem;
         padding: 1rem 1.5rem;
+        animation: none !important; /* 移除复杂动画 */
     }
 
     .title i {
         font-size: 2rem;
+        animation: none !important; /* 移除旋转动画 */
     }
 
     .subtitle {
         font-size: 1.1rem;
         padding: 0.6rem 1rem;
+        animation: none !important; /* 移除浮动动画 */
+    }
+
+    /* 移除背景动画以提升性能 */
+    body::before {
+        animation: none !important;
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%) !important;
+    }
+
+    /* 移除头部装饰动画 */
+    .header-decoration {
+        animation: none !important;
+        opacity: 0.3 !important;
     }
 
     .navigation-grid {
@@ -863,6 +879,7 @@ body::before {
         gap: 1.5rem;
     }
 
+    /* 移动端卡片优化 - 移除复杂动画和变换 */
     .nav-card {
         padding: 1.5rem;
         flex-direction: column;
@@ -871,6 +888,44 @@ body::before {
         /* 在移动设备上简化形状 */
         clip-path: none !important;
         border-radius: 20px !important;
+        /* 移除所有动画 */
+        animation: none !important;
+        transform: none !important;
+        transition: opacity 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    /* 移动端悬停效果简化 */
+    .nav-card:hover {
+        transform: none !important; /* 移除位置和大小变化 */
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important; /* 简化阴影 */
+    }
+
+    /* 移除移动端的复杂悬停变换 */
+    .nav-card:nth-child(6n+1):hover,
+    .nav-card:nth-child(6n+2):hover,
+    .nav-card:nth-child(6n+3):hover,
+    .nav-card:nth-child(6n+4):hover,
+    .nav-card:nth-child(6n+5):hover,
+    .nav-card:nth-child(6n+6):hover {
+        transform: none !important;
+        filter: none !important;
+        border-width: 2px !important;
+    }
+
+    /* 移动端图标简化 */
+    .nav-card:hover .card-icon {
+        transform: none !important;
+    }
+
+    /* 移动端文字效果简化 */
+    .nav-card:hover .card-title {
+        transform: none !important;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .nav-card:hover .card-description {
+        transform: none !important;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3) !important;
     }
 
     .card-content {
@@ -883,6 +938,23 @@ body::before {
         top: 10px !important;
         right: 10px !important;
         font-size: 16px !important;
+        animation: none !important; /* 移除装饰动画 */
+    }
+
+    /* 移除移动端的边框动画 */
+    .nav-card::before {
+        animation: none !important;
+        opacity: 0.1 !important;
+    }
+
+    /* 移除移动端的发光效果 */
+    .nav-card:nth-child(6n+1),
+    .nav-card:nth-child(6n+2),
+    .nav-card:nth-child(6n+3),
+    .nav-card:nth-child(6n+4),
+    .nav-card:nth-child(6n+5),
+    .nav-card:nth-child(6n+6) {
+        animation: none !important;
     }
 }
 
@@ -892,15 +964,38 @@ body::before {
         flex-direction: column;
         gap: 0.5rem;
         padding: 0.8rem 1rem;
+        animation: none !important;
     }
 
     .subtitle {
         font-size: 1rem;
         padding: 0.5rem 0.8rem;
+        animation: none !important;
     }
 
     .nav-card {
         padding: 1.25rem;
+        animation: none !important;
+        transform: none !important;
+    }
+
+    /* 进一步简化小屏幕设备的效果 */
+    .nav-card:hover {
+        transform: none !important;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2) !important;
+    }
+}
+
+/* 桌面和平板设备保持完整动画效果 */
+@media (min-width: 769px) {
+    /* 确保桌面端保持所有动画效果 */
+    .nav-card {
+        animation: cardBreathe 6s ease-in-out infinite;
+    }
+
+    /* 保持桌面端的复杂悬停效果 */
+    .nav-card:hover {
+        animation: none; /* 停止呼吸动画以显示悬停效果 */
     }
 }
 
