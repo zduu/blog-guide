@@ -113,11 +113,14 @@ blog-navigator/
 
 ```javascript
 // 只需要修改这些URL即可
-{
-  url: "https://your-blog.com",  // 👈 修改这里
-  title: "你的博客标题",
-  description: "你的博客描述"
-}
+    {
+      id: "tech-blog",
+      title: "正常人的博客",
+      description: "莫种意义上来说相当平庸的一个博客",
+      url: "https://zoeoe.de",  // 👈 修改这里的URL（示例：https://your-blog.com）
+      icon: "fas fa-rocket",
+      tags: ["学习", "折腾", "AI"]
+    }
 ```
 
 ### 自定义样式
@@ -131,29 +134,6 @@ blog-navigator/
     --accent-color: #f093fb;     /* 强调色 */
     /* ... 其他变量 */
 }
-```
-
-### 添加新的导航卡片
-
-在 `index.html` 中复制现有的卡片结构并修改内容：
-
-```html
-<div class="nav-card" data-url="https://new-blog.com">
-    <div class="card-icon">
-        <i class="fas fa-star"></i>
-    </div>
-    <div class="card-content">
-        <h3 class="card-title">新博客</h3>
-        <p class="card-description">博客描述</p>
-        <div class="card-tags">
-            <span class="tag">标签1</span>
-            <span class="tag">标签2</span>
-        </div>
-    </div>
-    <div class="card-arrow">
-        <i class="fas fa-arrow-right"></i>
-    </div>
-</div>
 ```
 
 ## 🔧 开发命令
