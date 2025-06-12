@@ -14,15 +14,15 @@ const BLOG_CONFIG = {
     {
       id: "tech-blog",
       title: "正常人的博客",
-      description: "探索前沿技术，分享编程经验与见解",
+      description: "莫种意义上来说相当平庸的一个博客",
       url: "https://zoeoe.de",  // 👈 修改这里的URL（示例：https://your-blog.com）
       icon: "fas fa-rocket",
-      tags: ["学习", "捣腾", "AI"]
+      tags: ["学习", "折腾", "AI"]
     },
     {
       id: "life-blog", 
       title: "幻想进行时",
-      description: "记录生活点滴，分享人生感悟与思考",
+      description: "幻想二次元浓度爆表",
       url: "http://zhou12203.top",  // 👈 修改这里的URL
       icon: "fas fa-lightbulb",
       tags: ["幻想", "发癫", "热爱"]
@@ -30,10 +30,18 @@ const BLOG_CONFIG = {
     {
       id: "reading-blog",
       title: "牛刀小试", 
-      description: "好书推荐，读书心得与知识分享",
+      description: "姑且当作一个收藏品",
       url: "https://blog.zhou12203.top",  // 👈 修改这里的URL
       icon: "fas fa-book-open",
       tags: ["摆设", "收藏", "尝试"]
+    },
+    {
+      id: "suibian-blog",
+      title: "我随便挂的", 
+      description: "六大美德启动！",
+      url: "http://vps.040627.xyz",  // 👈 修改这里的URL
+      icon: "fas fa-book-open",
+      tags: ["任务", "强制", "学生"]
     }
   ]
 };
