@@ -177,10 +177,6 @@ deno task start
 
 欢迎提交 Issue 和 Pull Request！
 
-## 📄 许可证
-
-MIT License
-
 ## 🙏 致谢
 
 - [Deno](https://deno.land/) - 现代化的 JavaScript/TypeScript 运行时
