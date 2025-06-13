@@ -27,6 +27,9 @@ function generateNavigationCards() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // 检测设备类型（移到最前面）
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
     // 首先生成导航卡片
     generateNavigationCards();
 
@@ -155,9 +158,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300);
         }
     }
-    
-    // 检测设备类型
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
 
     // 添加鼠标跟踪效果和粒子效果（仅桌面端）
     if (!isMobile) {
